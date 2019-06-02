@@ -1,0 +1,82 @@
+"""# 修改标签文字和线条粗细
+import matplotlib.pyplot as plt
+squares = [1,4,9,16,25]
+plt.plot(squares,linewidth=5)
+# 设置图表标题，并给坐标轴加上标签。
+plt.title("Square Numbers",fontsize=24)
+plt.xlabel("Value",fontsize=14)
+plt.ylabel("Square of Value",fontsize=14)
+# 设置刻度标记的大小
+plt.tick_params(axis='both',labelsize=14)
+plt.show()"""
+
+"""# 校正图形
+import matplotlib.pyplot as plt
+input_value=[1,2,3,4,5]
+squares = [1,4,9,16,25]
+plt.plot(input_value,squares,linewidth=2)
+# 设置图表标题，并给坐标轴加上标签。
+plt.title("Square Numbers",fontsize=24)
+plt.xlabel("Value",fontsize=14)
+plt.ylabel("Square of Value",fontsize=14)
+# 设置刻度标记的大小
+plt.tick_params(axis='both',labelsize=14)
+plt.show()"""
+
+'''# 使用scatter（）绘制散点图并设置其样式
+import matplotlib.pyplot as plt
+plt.scatter(2,4,s=200)
+# 设置图表标题并给坐标轴加上标签
+plt.title("Square Numbers",fontsize=24)
+plt.xlabel("Value",fontsize=14)
+plt.ylabel("Square of Value",fontsize=14)
+# 设置刻度标记的大小
+plt.tick_params(axis='both',which='major',labelsize=14)
+plt.show()'''
+
+'''# 使用scatter（）绘制一些点
+import matplotlib.pyplot as plt
+x_values=[1,2,3,4,5]
+y_values=[1,4,9,16,25]
+plt.scatter(x_values,y_values,s=100)
+# 设置图表标题并给坐标轴加上标签
+plt.title("Square Numbers",fontsize=24)
+plt.xlabel("Value",fontsize=14)
+plt.ylabel("Square of Value",fontsize=14)
+# 设置刻度标记的大小
+plt.tick_params(axis='both',which='major',labelsize=14)
+plt.show()'''
+
+"""# 自动计算数据
+import matplotlib.pyplot as plt
+x_values=list(range(1,1001))
+y_values=[x**3 for x in x_values]
+# 删除数据点的轮廓，自定义颜色等操作，括号是RGB参数,cmap是使用颜色映射
+plt.scatter(x_values,y_values,c=y_values,cmap=plt.cm.Blues,edgecolors='none',s=10)
+# 设置图表标题并给坐标轴加上标签
+plt.title("Square Numbers",fontsize=24)
+plt.xlabel("Value",fontsize=14)
+plt.ylabel("Square of Value",fontsize=14)
+# 设置每个坐标轴的取值范围
+plt.axis([0,1100,0,1100000])
+# 设置刻度标记的大小
+plt.tick_params(axis='both',which='major',labelsize=14)
+# 描绘图形
+plt.show()
+# 自动保存图表`
+#plt.savefig("squares_plot.png",bbox_inches='tight')"""
+
+# 立方数
+import matplotlib.pyplot as plt
+# 中文显示部分函数
+# plt.rcParams['font.family'] = ['sans-serif']
+plt.rcParams['font.sans-serif'] = ['SimHei']
+# 如果用pycharm 只需上面一句即可
+x_values = list(range(1,5000))
+y_values = [x**3 for x in x_values]
+plt.scatter(x_values,y_values,c=x_values,cmap=plt.cm.Blues,edgecolors="None",s=10)
+plt.title("数的立方",fontsize=24)
+plt.xlabel("常数",fontsize=14)
+plt.ylabel("立方值",fontsize=14)
+plt.tick_params(axis='both',which='major',labelsize=14)
+plt.show()
